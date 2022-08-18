@@ -1,4 +1,4 @@
-# Space Travelers' Hub
+# Decode Morse Algorithm
 
 > Morse decoding algorithm
 
