@@ -32,7 +32,7 @@ def decode_morse_character(morse_code)
   morse_code.split.map { |code| MORSE_TO_CHARACTERS[code] }.join
 end
 
-def decode_morse_new(morse_code)
+def decode_morse_sentence(morse_code)
   text = ''
   morse_code.split('   ').each do |word|
     text << "#{decode_morse_character(word)} "
@@ -40,6 +40,8 @@ def decode_morse_new(morse_code)
   text.strip
 end
 
-decode_morse_character('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode_morse_character('-.--')
 
-decode_morse_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode_morse_sentence('-- -.--   -. .- -- .')
+
+puts decode_morse_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
